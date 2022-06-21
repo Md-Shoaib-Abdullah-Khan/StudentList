@@ -8,11 +8,8 @@ public class StudentList {
 		if(args[0].equals("a")) {
 			System.out.println("Loading data ...");			
 			try {
-				BufferedReader bufferedReader = new BufferedReader(
-					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
-			String line = bufferedReader.readLine();
-			String studentNames[] = line.split(",");			
+				
+			String studentNames[] = getString();			
 			for(String studentName : studentNames) {
 				 System.out.println(studentName.trim()); 
 				}
@@ -108,5 +105,16 @@ public class StudentList {
 			System.out.println("Data Loaded.");
 							
 		}
+	}
+	private string getString(){
+		try{
+			BufferedReader bufferedReader = new BufferedReader(
+					new InputStreamReader(
+							new FileInputStream("students.txt"))); 
+			String line = bufferedReader.readLine();
+		}catch(exception Exception){
+			
+		}
+			return ling.split(",");
 	}
 }
