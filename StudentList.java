@@ -37,10 +37,9 @@ public class StudentList {
 				BufferedWriter bufferedWriter = new BufferedWriter(
 					new FileWriter(Constants.fileName, true));
 			String index = args[0].substring(1);
-	        Date date = new Date();
 	        String dateFormatSample = Constants.dateFormat;
 	        DateFormat dateFormat = new SimpleDateFormat(dateFormatSample);
-	        String updatedDate= dateFormat.format(date);
+	        String updatedDate= dateFormat.format(new Date());
 			bufferedWriter.write(", "+index+Constants.listUpdate+updatedDate);
 			bufferedWriter.close();
 			} catch (Exception e){
@@ -54,12 +53,10 @@ public class StudentList {
 			System.out.println(Constants.dataStatus);			
 			try {
 			String studentNames[] = getString();	
-			boolean done = false;
 			String firstName = args[0].substring(1);
-			for(int index = 0; index<studentNames.length && !done; index++) {
+			for(int index = 0; index<studentNames.length; index++) {
 				if(studentNames[index].equals(firstName)) {
 					System.out.println(Constants.foundStatus);
-					done=true;
 					}
 				}
 			} catch (Exception e){
