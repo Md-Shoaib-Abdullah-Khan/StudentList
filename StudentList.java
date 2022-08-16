@@ -7,8 +7,7 @@ public class StudentList {
 			System.out.println(Constants.invalidInput);
 		if(args[0].equals(Constants.inputA)) {
 			System.out.println(Constants.dataStatus);			
-			try {
-				
+			try {	
 			String studentNames[] = getString();			
 			for(String studentName : studentNames) {
 				 System.out.println(studentName.trim()); 
@@ -20,7 +19,7 @@ public class StudentList {
 		}
 		else if(args[0].equals(Constants.inputR)) {
 			System.out.println(Constants.dataStatus);			
-				try {
+			try {
 			String studentNames[] = getString();	
 			System.out.println(studentNames[0].trim());
 			Random random = new Random();
